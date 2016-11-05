@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Randa</title>
     <%= csrf_meta_tags %>
 
@@ -9,6 +10,12 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header>
+      <%= render 'layouts/navigation' %>
+    </header>
+    <main role="main">
+       <%= render 'layouts/messages' %>
+       <%= yield %>
+    </main>
   </body>
 </html>
