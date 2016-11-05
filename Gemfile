@@ -28,7 +28,10 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
+gem 'capistrano-rails', group: :development
+gem 'capistrano-rbenv'
+gem 'capistrano-chruby'
+gem 'capistrano-passenger'
 
 gem 'mysql2'
 gem 'devise'
