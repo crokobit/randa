@@ -1,4 +1,7 @@
 <div>
     <a href="<%= article_path(article) %>"><%= article.title %></a>
-  <%= link_to "Edit", edit_article_path(article) %>
+
+  <% if user_signed_in? && current_user.try(:admin?) %>
+    <%= link_to "Edit", edit_article_path(article) %>
+  <% end %>
 </div>

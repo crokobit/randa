@@ -1,6 +1,8 @@
 <div class="container">
   <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
-    <p><%= link_to "New", new_article_path %></p>
+    <% if user_signed_in? && current_user.try(:admin?) %>
+      <p><%= link_to "New", new_article_path %></p>
+    <% end %>
     <div>
       <% @articles.each do |article| %>
         <%= render 'article', article: article %>
