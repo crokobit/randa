@@ -3,6 +3,6 @@
   <hr>
   <p><span class="glyphicon glyphicon-time"></span> Posted on <%= @article.created_at %></p>
   <hr>
-  <p class="lead"><%= @article.content %></p>
+  <p class="lead"><%= simple_format @article.content %></p>
   <hr>
 </div>
